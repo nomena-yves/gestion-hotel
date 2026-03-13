@@ -1,9 +1,7 @@
 package hei.group.hotel.Controlleurs;
 
 import hei.group.hotel.Service.Service;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,4 +17,9 @@ public List<Service.Reservation> getBooking(){
 return reservations;
     }
 
+    @PostMapping("/booking")
+    public Service.Reservation bookReservation(@RequestBody Service.Reservation reservation){
+        reservations.add(reservation);
+        return reservation;
+    }
 }
