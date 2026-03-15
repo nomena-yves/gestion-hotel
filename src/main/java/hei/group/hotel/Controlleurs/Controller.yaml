@@ -1,0 +1,15 @@
+opnapi: 3.0.3
+info:
+    version: 1.0.0
+    title: STD24012
+    description: This  is  a  specification  of<STD24012>
+paths:
+  /booking:
+    get:
+      semmary: toutes les reservations actuelles
+      responses:
+        '200':
+        description: OK
+
+
+
